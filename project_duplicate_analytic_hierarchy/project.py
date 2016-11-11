@@ -3,15 +3,13 @@
 # For copyright and license notices, see __openerp__.py file in module root
 # directory
 ##############################################################################
-from openerp import models, fields
+from openerp import models, api
 
 
-class project(models.Model):
+class ProjectProject(models.Model):
     _inherit = 'project.project'
 
-    project_tag_ids = fields.Many2many(
-        'project.tags',
-        'project_project_tag_ids_rel',
-        'project_id',
-        'project_tag_id',
-        string='Tags')
+    @api.one
+    def copy(self, default=None):
+        return super(ProjectProject, self.with_context(
+            analytic_project_copy=False)).copy(default=default)

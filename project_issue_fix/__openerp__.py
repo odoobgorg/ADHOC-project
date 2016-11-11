@@ -19,21 +19,27 @@
 #
 ##############################################################################
 {
-    'name': 'Project Description',
-    'version': '9.0.1.0.0',
-    'category': 'Projects & Services',
+    "name": "Project Issue Fix",
+    'version': '8.0.0.0.0',
+    'category': 'Project',
     'sequence': 14,
     'summary': '',
+    'description': """
+Project Issue Fix
+=================
+* Use same rule for employees as in task so that they can create issues on
+projects of type "followers only"
+    """,
     'author': 'ADHOC SA',
     'website': 'www.adhoc.com.ar',
     'license': 'AGPL-3',
     'images': [
     ],
     'depends': [
-        'project',
+        'project_issue',
     ],
     'data': [
-        'view/project_view.xml',
+        'security/portal_security.xml'
     ],
     'demo': [
     ],
